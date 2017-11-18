@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Seller } from '../../shared/seller.model';
 
 @Component({
   selector: 'app-seller',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seller.component.css']
 })
 export class SellerComponent implements OnInit {
+  @Input() seller: Seller;
+  @Input() index: number;
 
   constructor() { }
 
