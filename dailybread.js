@@ -12,10 +12,11 @@ var conn = mysql.createConnection({
 });
 
 
-app.get('/api/', (req, res) => 
+app.get('/api/reviews/:sellerid', (req, res) => 
 {
     //conn.connect()
-    conn.query('SELECT * from sellers', function(err, rows, fields) {
+    var sellerid = req.params['sellerid'];
+    conn.query('SELECT * from reviews WHERE sellerID="' + sellerid + '"', function(err, rows, fields) {
         if (!err)
         {
             console.log('The solution is: ', rows);
