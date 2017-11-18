@@ -16,7 +16,7 @@ app.get('/api/reviews/:sellerid', (req, res) =>
 {
     //conn.connect()
     var sellerid = req.params['sellerid'];
-    conn.query('SELECT * from reviews WHERE sellerID="' + sellerid + '"', function(err, rows, fields) {
+    conn.query('SELECT * from reviews WHERE sellerID=?', [sellerid], function(err, rows, fields) {
         if (!err)
         {
             console.log('The solution is: ', rows);
