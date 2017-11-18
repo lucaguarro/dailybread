@@ -24,6 +24,8 @@
     "@angular/router": "^4.0.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "express": "^4.16.2",
+    "node-mysql": "^0.4.2",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
