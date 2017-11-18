@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Seller } from '../../shared/seller.model';
+import { Seller } from '../../../shared/seller.model';
 
 @Component({
   selector: 'app-seller',

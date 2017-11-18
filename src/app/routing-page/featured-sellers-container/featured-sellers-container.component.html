@@ -4,8 +4,7 @@
   </div>
   <div class="content">
     <h2>Sellers</h2>
-    <li *ngFor = "let sellerEl of sellers; let i = index">
-      <app-seller [seller]="sellerEl" [index]="i"></app-seller>
-    </li>
+    <app-seller *ngFor = "let sellerEl of sellers; let i = index" [seller]="sellerEl" [index]="i"></app-seller>
+
   </div>
 </div>
