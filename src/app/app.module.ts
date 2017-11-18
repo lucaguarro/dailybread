@@ -7,6 +7,9 @@ import { FeaturedDealsContainerComponent } from './featured-deals-container/feat
 import { DealComponent } from './featured-deals-container/deal/deal.component';
 import { FeaturedSellersContainerComponent } from './featured-sellers-container/featured-sellers-container.component';
 import { SellerComponent } from './featured-sellers-container/seller/seller.component';
+import { SellerMapComponent } from './seller-map/seller-map.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -15,10 +18,15 @@ import { SellerComponent } from './featured-sellers-container/seller/seller.comp
     FeaturedDealsContainerComponent,
     DealComponent,
     FeaturedSellersContainerComponent,
-    SellerComponent
+    SellerComponent,
+    SellerMapComponent,
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA34CD56vz2YVcQyd0WfFZo3LWp7HfzEG8'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
