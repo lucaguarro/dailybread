@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Headers, Http } from '@angular/http';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private http: Http) { 
+    
+  }
+  makeGetRequest(){
+    return this.http.get(`/api/reviews/bakery1.0`).subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+    );
+  }
   ngOnInit() {
   }
 
