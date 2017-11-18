@@ -1,3 +1,11 @@
-<p>
-  featured-sellers-container works!
-</p>
+<div class="wrapper">
+  <div class="sidebar">
+    <h2>Sidebar</h2>
+  </div>
+  <div class="content">
+    <h2>Sellers</h2>
+    <li *ngFor = "let sellerEl of sellers; let i = index">
+      <app-seller [seller]="sellerEl" [index]="i"></app-seller>
+    </li>
+  </div>
+</div>
