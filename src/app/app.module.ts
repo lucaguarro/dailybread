@@ -14,6 +14,12 @@ import { SellerMapComponent } from './routing-page/seller-map/seller-map.compone
 import { AgmCoreModule } from '@agm/core';
 import { RoutingPageComponent } from './routing-page/routing-page.component';
 import { SellerPageComponent } from './seller-page/seller-page.component';
+import { SellerHeaderComponent } from './seller-page/seller-header/seller-header.component';
+import { BakeryMenuComponent } from './seller-page/bakery-menu/bakery-menu.component';
+import { BakeryMenuNavbarComponent } from './seller-page/bakery-menu/bakery-menu-navbar/bakery-menu-navbar.component';
+import { BakeryItemsListComponent } from './seller-page/bakery-menu/bakery-items-list/bakery-items-list.component';
+import { BakeryItemComponent } from './seller-page/bakery-menu/bakery-items-list/bakery-item/bakery-item.component';
+import { StoreNavBarComponent } from './seller-page/store-nav-bar/store-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,12 @@ import { SellerPageComponent } from './seller-page/seller-page.component';
     SellerMapComponent,
     RoutingPageComponent,
     SellerPageComponent,
-    
+    SellerHeaderComponent,
+    BakeryMenuComponent,
+    BakeryMenuNavbarComponent,
+    BakeryItemsListComponent,
+    BakeryItemComponent,
+    StoreNavBarComponent,
   ],
   imports: [
     BrowserModule,
