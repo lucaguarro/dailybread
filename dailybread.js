@@ -2,6 +2,11 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+var bodyParser = require('body-parser');
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 
 var mysql      = require('mysql');
 var conn = mysql.createConnection({
@@ -64,17 +69,21 @@ app.get('/api/menu/:sellerid', (req, res) =>
 
 app.post('/api/create/seller', (req, res) =>
 {
-    var {name, description, street, city, state, zipcode} = req.params;
+    var {name, description, street, city, state, zipcode, profilePic, deliveryRadius} = req.body;
     var address = street + " " + city + ", " + state + " " + zipcode;
-    conn.query('INSERT INTO sellers (name, description, address) VALUES (?, ?, ?)', [name,
-            description, address], function (err, rows, fields) 
+    conn.query('INSERT INTO sellers (name, description, address, profilePic, deliveryRadius, delivers) VALUES (?, ?, ?, ?, ?, "yes")', 
+    [name, description, address, profilePic, deliveryRadius], function (err, rows, fields) 
     {
         if (!err)
         {
             res.send("Post successful");
         }
         else
+        {
             console.log(err);
+            res.send("Post failed");
+        }
+           
     })
 })
 
