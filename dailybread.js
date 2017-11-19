@@ -11,6 +11,30 @@ var conn = mysql.createConnection({
   database : 'dailybread'
 });
 
+app.get('/api/sellers', (req, res) => 
+{
+    conn.query('SELECT * from sellers', function(err, rows, fields) {
+        if (!err)
+        {
+            res.send(rows);
+        }
+        else
+            console.log(err);
+    });
+});
+
+app.get('/api/sellers/:sellerid', (req, res) => 
+{
+    var sellerid = req.params['sellerid'];
+    conn.query('SELECT * from sellers WHERE sellerID=?', [sellerid], function(err, rows, fields) {
+        if (!err)
+        {
+            res.send(rows);
+        }
+        else
+            console.log(err);
+    });
+});
 
 app.get('/api/reviews/:sellerid', (req, res) => 
 {
