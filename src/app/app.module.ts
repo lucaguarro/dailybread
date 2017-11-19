@@ -12,6 +12,7 @@ import { SellerComponent } from './routing-page/featured-sellers-container/selle
 import { SellerMapComponent } from './routing-page/seller-map/seller-map.component';
 
 import { AgmCoreModule } from '@agm/core';
+<<<<<<< HEAD
 import { RoutingPageComponent } from './routing-page/routing-page.component';
 import { SellerPageComponent } from './seller-page/seller-page.component';
 import { SellerHeaderComponent } from './seller-page/seller-header/seller-header.component';
@@ -20,6 +21,9 @@ import { BakeryMenuNavbarComponent } from './seller-page/bakery-menu/bakery-menu
 import { BakeryItemsListComponent } from './seller-page/bakery-menu/bakery-items-list/bakery-items-list.component';
 import { BakeryItemComponent } from './seller-page/bakery-menu/bakery-items-list/bakery-item/bakery-item.component';
 import { StoreNavBarComponent } from './seller-page/store-nav-bar/store-nav-bar.component';
+=======
+import {SellerService} from './shared/seller.service';
+>>>>>>> 32522f77b29dbc290a38adaa3babf1cc9393374c
 
 @NgModule({
   declarations: [
@@ -47,7 +51,7 @@ import { StoreNavBarComponent } from './seller-page/store-nav-bar/store-nav-bar.
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SellerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
