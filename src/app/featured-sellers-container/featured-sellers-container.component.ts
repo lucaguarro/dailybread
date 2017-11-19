@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Seller } from '../shared/seller.model';
+import {SellerService} from '../shared/seller.service';
+import{Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-featured-sellers-container',
@@ -8,17 +10,19 @@ import { Seller } from '../shared/seller.model';
 })
 export class FeaturedSellersContainerComponent implements OnInit {
   sellers: Seller[] = [];
-  constructor() { 
-
+  
+private subscription: Subscription;
+  constructor(private slService: SellerService) { 
   }
 
   ngOnInit() {
-    this.sellers.push( new Seller(
-      'Jane Baker',
-      '/assets/images/testImages/happyBaker.jpg',
-      1
-      )
-    )
+    this.sellers = this.slService.getSellers();
+    this.subscription = this.slService.sellersChanged
+      .subscribe(
+        (sellers: Seller[]) => {
+          this.sellers = sellers;
+        }
+      );
   }
 
 }

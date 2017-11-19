@@ -1,5 +1,7 @@
   <div class="pull-right">
     <h4 class="list-group-item-heading">{{ seller.name }}</h4>
+    <h4 class="list-group-item-heading">{{ seller.address }}</h4>
+    <h4 class="list-group-item-heading">Delivery Radius: {{ seller.deliveryRadius }}</h4>
     <img
       [src]="seller.profilePic"
       alt="{{ seller.name }}"

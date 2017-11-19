@@ -11,6 +11,7 @@ import { SellerComponent } from './featured-sellers-container/seller/seller.comp
 import { SellerMapComponent } from './seller-map/seller-map.component';
 
 import { AgmCoreModule } from '@agm/core';
+import {SellerService} from './shared/seller.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AgmCoreModule } from '@agm/core';
     }),
     HttpModule
   ],
-  providers: [],
+  providers: [SellerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
