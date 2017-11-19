@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Product } from '../../../../shared/product.model';
 
 @Component({
   selector: 'app-bakery-item',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bakery-item.component.css']
 })
 export class BakeryItemComponent implements OnInit {
-
+  @Input() product: Product;
+  @Input() index: number;
   constructor() { }
 
   ngOnInit() {
