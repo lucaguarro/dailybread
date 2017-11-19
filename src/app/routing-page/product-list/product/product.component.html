@@ -1,0 +1,10 @@
+  <div class="pull-right">
+    <h4 class="list-group-item-heading">{{ product.Name }}</h4>
+    <a routerLink="/product/[product.Food_ID]">
+      <img
+        [src]="product.Picture"
+        alt="{{ product.Name }}"
+        class="img-responsive"
+        style="max-height: 150px;">
+    </a>
+  </div>

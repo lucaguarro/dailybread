@@ -21,6 +21,9 @@ import { BakeryItemsListComponent } from './seller-page/bakery-menu/bakery-items
 import { BakeryItemComponent } from './seller-page/bakery-menu/bakery-items-list/bakery-item/bakery-item.component';
 import { StoreNavBarComponent } from './seller-page/store-nav-bar/store-nav-bar.component';
 import {SellerService} from './shared/seller.service';
+import { ProductListComponent } from './routing-page/product-list/product-list.component';
+import { ProductComponent } from './routing-page/product-list/product/product.component';
+import {ProductService} from './shared/product.service';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,8 @@ import {SellerService} from './shared/seller.service';
     BakeryItemsListComponent,
     BakeryItemComponent,
     StoreNavBarComponent,
+    ProductListComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,7 @@ import {SellerService} from './shared/seller.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [SellerService],
+  providers: [SellerService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
