@@ -62,11 +62,11 @@ app.get('/api/menu/:sellerid', (req, res) =>
     });
 })
 
-app.post('/api/newseller', (req, res) =>
+app.post('/api/create/seller', (req, res) =>
 {
-    var {sellerid, name, description, street, city, state, zipcode} = req.params;
+    var {name, description, street, city, state, zipcode} = req.params;
     var address = street + " " + city + ", " + state + " " + zipcode;
-    conn.query('INSERT INTO sellers (sellerID, name, description, address) VALUES (?, ?, ?, ?)', [sellerid, name,
+    conn.query('INSERT INTO sellers (name, description, address) VALUES (?, ?, ?)', [name,
             description, address], function (err, rows, fields) 
     {
         if (!err)
