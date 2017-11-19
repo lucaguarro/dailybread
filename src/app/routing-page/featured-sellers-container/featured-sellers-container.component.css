@@ -7,6 +7,10 @@ html {
   font-size: 16px;
 }
 
+.margin{
+  margin-left: 10%;
+}
+
 .wrapper {
   display: flex;
   height: 500px;
@@ -21,10 +25,7 @@ html {
 }
 
 .content {
-  background: #0074D9;
-  color: hsla(208, 100%, 85%, 1.0);
   overflow-y: scroll;
-  padding: 10px;
 }
 
 .sidebar::-webkit-scrollbar {
