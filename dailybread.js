@@ -90,7 +90,8 @@ app.post('/api/create/seller', (req, res) =>
         {
             if (!err)
             {
-                res.send("Post successful");
+                console.log("Post successful");
+                res.redirect("/");
             }
             else
             {
