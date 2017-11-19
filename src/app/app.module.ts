@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FeaturedDealsContainerComponent } from './routing-page/featured-deals-container/featured-deals-container.component';
-import { DealComponent } from './routing-page/featured-deals-container/deal/deal.component';
 import { FeaturedSellersContainerComponent } from './routing-page/featured-sellers-container/featured-sellers-container.component';
 import { SellerComponent } from './routing-page/featured-sellers-container/seller/seller.component';
 import { SellerMapComponent } from './routing-page/seller-map/seller-map.component';
@@ -34,8 +32,6 @@ import { StoreFrontFormComponent } from './store-front-create/store-front-form/s
   declarations: [
     AppComponent,
     NavbarComponent,
-    FeaturedDealsContainerComponent,
-    DealComponent,
     FeaturedSellersContainerComponent,
     SellerComponent,
     SellerMapComponent,
