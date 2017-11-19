@@ -1,6 +1,6 @@
   <div class="pull-right">
     <h4 class="list-group-item-heading">{{ seller.name }}</h4>
-    <a routerLink="/seller">
+    <a routerLink="/seller/[seller.sellerID]">
       <img
         [src]="seller.profilePic"
         alt="{{ seller.name }}"

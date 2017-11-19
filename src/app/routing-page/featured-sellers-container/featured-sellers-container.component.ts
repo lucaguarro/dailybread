@@ -16,7 +16,7 @@ export class FeaturedSellersContainerComponent implements OnInit {
     this.sellers.push( new Seller(
       'Jane Baker',
       '/assets/images/testImages/happyBaker.jpg',
-      1
+      'Bakery1.0'
       )
     )
   }

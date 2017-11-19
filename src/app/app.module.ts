@@ -13,6 +13,7 @@ import { SellerMapComponent } from './routing-page/seller-map/seller-map.compone
 
 import { AgmCoreModule } from '@agm/core';
 import { RoutingPageComponent } from './routing-page/routing-page.component';
+import { SellerPageComponent } from './seller-page/seller-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RoutingPageComponent } from './routing-page/routing-page.component';
     SellerComponent,
     SellerMapComponent,
     RoutingPageComponent,
+    SellerPageComponent,
     
   ],
   imports: [

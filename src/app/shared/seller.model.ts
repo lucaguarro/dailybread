@@ -1,9 +1,9 @@
 export class Seller {
     public name: string;
     public profilePic: string;
-    public sellerID: number;
+    public sellerID: string;
 
-    constructor(name: string, profilePic: string, sellerID: number){
+    constructor(name: string, profilePic: string, sellerID: string){
         this.name = name;
         this.profilePic = profilePic;
         this.sellerID = sellerID;
