@@ -1,5 +1,5 @@
     
-  <div class="row"  *ngIf="index%2==0"></div>
+  <!--<div class="row"  *ngIf="index%2==0"></div>
   <div class="col-sm-6" *ngIf="index%2==0">
     <h4 class="list-group-item-heading">{{ seller.name }}</h4>
     <a routerLink="/seller/{{seller.sellerID}}">
@@ -10,14 +10,26 @@
         style="max-height: 150px;">
     </a>
   </div>
-    <div class="col-sm-6" *ngIf="index%2==1">
+  <div class="col-sm-6" *ngIf="index%2==1">
     <h4 class="list-group-item-heading">{{ seller.name }}</h4>
-    <a routerLink="/seller/[seller.sellerID]">
+    <a routerLink="/seller/{{seller.sellerID}}">
       <img
         [src]="seller.profilePic"
         alt="{{ seller.name }}"
         class="img-responsive"
         style="max-height: 150px;">
     </a>
+  </div>-->
+<a routerLink="/seller/{{seller.sellerID}}">
+  <div class="row equipo-item">
+  <div class="col-md-6 separador-vertical"><img [src]="seller.profilePic" class="img-responsive center-block"></div> 
+    <div class="col-md-6">
+      <h4 class="titulo-equipo">{{seller.name}}</h4>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
   </div>
-
+</a>
