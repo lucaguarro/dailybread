@@ -34,8 +34,24 @@ app.get('/api/menu/:sellerid', (req, res) =>
             res.send(rows);
         }
         else
-          console.log(err);
+            console.log(err);
     });
+})
+
+app.post('/api/newseller', (req, res) =>
+{
+    var {sellerid, name, description, street, city, state, zipcode} = req.params;
+    var address = street + " " + city + ", " + state + " " + zipcode;
+    conn.query('INSERT INTO sellers (sellerID, name, description, address) VALUES (?, ?, ?, ?)', [sellerid, name,
+            description, address], function (err, rows, fields) 
+    {
+        if (!err)
+        {
+            res.send("Post successful");
+        }
+        else
+            console.log(err);
+    })
 })
 
 app.use(express.static(path.join(__dirname, 'dist')));
