@@ -1,26 +1,34 @@
 <form action="/api/create/seller" method="post">
   <div class="form-group">
     <label for="name">Name of Store:</label>
-    <input type="name" class="form-control" id="name" placeholder="Storefront Name">
+    <input name="name" type="name" class="form-control" id="name" placeholder="Storefront Name">
     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
   </div>
   <div class="form-group">
       <label for="description">Description:</label>
-      <input type="description" class="form-control" id="description" placeholder="Describe yourself">
+      <input name="description" type="description" class="form-control" id="description" placeholder="Describe yourself">
       <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
   <div class="form-group">
     <label for="street">Address:</label>
-    <input type="street" class="form-control" id="street" placeholder="Street Address">
+    <input name="street" type="street" class="form-control" id="street" placeholder="Street Address">
   </div>
   <div class="form-group">
-    <input type="city" class="form-control" id="city" placeholder="City">
+    <input name="city" type="city" class="form-control" id="city" placeholder="City">
   </div>
   <div class="form-group">
-    <input type="state" class="form-control" id="state" placeholder="State">
+    <input name="state" type="state" class="form-control" id="state" placeholder="State">
   </div>
   <div class="form-group">
-    <input type="zipcode" class="form-control" id="zipcode" placeholder="Zipcode">
+    <input name="zipcode" type="zipcode" class="form-control" id="zipcode" placeholder="Zipcode">
+  </div>
+  <div class="form-group">
+      <label for="profilePic">Image url:</label>
+      <input type="profilePic" class="form-control" id="profilePic" placeholder="https://imgur.com/XXXXX.jpg">
+  </div>
+  <div class="form-group">
+      <label for="deliveryRadius">Delivery Radius:</label>
+      <input name="delvieryRadius" type="deliveryRadius" class="form-control" id="deliveryRadius" placeholder="Number of miles">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
