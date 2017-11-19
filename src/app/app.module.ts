@@ -27,6 +27,7 @@ import {ProductService} from './shared/product.service';
 import { ShoppingListComponent } from './routing-page/shopping-list/shopping-list.component';
 import {ShoppingListService} from './shared/shopping-list.service';
 import { ShoppingListItemComponent } from './routing-page/shopping-list/shopping-list-item/shopping-list-item.component';
+import { StoreFrontCreateComponent } from './store-front-create/store-front-create.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ShoppingListItemComponent } from './routing-page/shopping-list/shopping
     ProductComponent,
     ShoppingListComponent,
     ShoppingListItemComponent,
+    StoreFrontCreateComponent,
   ],
   imports: [
     BrowserModule,
