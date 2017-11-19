@@ -1,4 +1,6 @@
-  <div class="pull-right">
+    
+  <div class="row"  *ngIf="index%2==0"></div>
+  <div class="col-sm-6" *ngIf="index%2==0">
     <h4 class="list-group-item-heading">{{ seller.name }}</h4>
     <a routerLink="/seller/{{seller.sellerID}}">
       <img
@@ -8,3 +10,14 @@
         style="max-height: 150px;">
     </a>
   </div>
+    <div class="col-sm-6" *ngIf="index%2==1">
+    <h4 class="list-group-item-heading">{{ seller.name }}</h4>
+    <a routerLink="/seller/[seller.sellerID]">
+      <img
+        [src]="seller.profilePic"
+        alt="{{ seller.name }}"
+        class="img-responsive"
+        style="max-height: 150px;">
+    </a>
+  </div>
+

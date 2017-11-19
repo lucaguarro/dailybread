@@ -1,9 +1,7 @@
 <div class="wrapper">
-  <div class="sidebar">
-    <h2>Sidebar</h2>
-  </div>
+
+    <h2>Products in Your Area</h2>
   <div class="content">
-    <h2>Sellers</h2>
     <app-product *ngFor = "let product of products; let i = index" [product]="product" [index]="i">Product component</app-product>
 
   </div>

@@ -24,6 +24,9 @@ import {SellerService} from './shared/seller.service';
 import { ProductListComponent } from './routing-page/product-list/product-list.component';
 import { ProductComponent } from './routing-page/product-list/product/product.component';
 import {ProductService} from './shared/product.service';
+import { ShoppingListComponent } from './routing-page/shopping-list/shopping-list.component';
+import {ShoppingListService} from './shared/shopping-list.service';
+import { ShoppingListItemComponent } from './routing-page/shopping-list/shopping-list-item/shopping-list-item.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,8 @@ import {ProductService} from './shared/product.service';
     StoreNavBarComponent,
     ProductListComponent,
     ProductComponent,
+    ShoppingListComponent,
+    ShoppingListItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,7 @@ import {ProductService} from './shared/product.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [SellerService, ProductService],
+  providers: [SellerService, ProductService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

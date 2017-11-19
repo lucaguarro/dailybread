@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ShoppingListService} from '../shared/shopping-list.service';
 
 @Component({
   selector: 'app-routing-page',

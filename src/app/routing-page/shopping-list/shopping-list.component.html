@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="content">
+    <h2>Shopping Cart</h2>
+      <div class="row">
+  	<div class="col-sm-4">
+    	<p class="list-group-item-heading">Product Name</p>
+	</div>
+	  	<div class="col-sm-4">
+    	<p class="list-group-item-heading">Product Price</p>
+	</div>
+	  	<div class="col-sm-4">
+    	<p class="list-group-item-heading">Product Quantity</p>	</div>
+
+  </div>
+    <app-shopping-list-item *ngFor = "let shoppingListItem of shoppingList; let i = index" [product]="products[shoppingList[i].productID]" [qty]="shoppingList[i].quantity"></app-shopping-list-item>
+</div>
+</div>
+
+          <button
+            type="submit"
+            class="btn btn-success">Check Out</button>
+          <button type="button" class="btn btn-danger" (click)="onCancel()">Clear Cart</button>
