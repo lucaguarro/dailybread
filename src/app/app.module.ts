@@ -27,7 +27,7 @@ import {ShoppingListService} from './shared/shopping-list.service';
 import { ShoppingListItemComponent } from './routing-page/shopping-list/shopping-list-item/shopping-list-item.component';
 import { StoreFrontCreateComponent } from './store-front-create/store-front-create.component';
 import { StoreFrontFormComponent } from './store-front-create/store-front-form/store-front-form.component';
-
+//import {CurrentSellerService} from './seller-page/current-seller.service';
 @NgModule({
   declarations: [
     AppComponent,

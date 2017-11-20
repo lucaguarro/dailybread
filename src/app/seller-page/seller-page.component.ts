@@ -10,7 +10,7 @@ import { Response } from '@angular/http';
   providers: [CurrentSellerService]
 })
 export class SellerPageComponent implements OnInit {
-  id: number
+  id: number;
   constructor( private route: ActivatedRoute, private currSlService: CurrentSellerService) { }
 
   ngOnInit() {
