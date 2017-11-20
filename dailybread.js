@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const request = require("request");
 const app = express();
 
 var bodyParser = require('body-parser');
@@ -7,6 +8,8 @@ app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
+
+var geoKey = "AIzaSyDzx3H9qPE2t5mBnfS2W8879F1B4gsNp5o";
 
 var mysql      = require('mysql');
 var conn = mysql.createConnection({
@@ -71,20 +74,33 @@ app.post('/api/create/seller', (req, res) =>
 {
     var {name, description, street, city, state, zipcode, profilePic, deliveryRadius} = req.body;
     var address = street + " " + city + ", " + state + " " + zipcode;
-    conn.query('INSERT INTO sellers (name, description, address, profilePic, deliveryRadius, delivers) VALUES (?, ?, ?, ?, ?, "yes")', 
-    [name, description, address, profilePic, deliveryRadius], function (err, rows, fields) 
-    {
-        if (!err)
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + geoKey;
+    request.get(url, (error, response, body) => {
+        let json = JSON.parse(body);
+        address = json.results[0].formatted_address;
+        var lat = json.results[0].geometry.location.lat;
+        var lng = json.results[0].geometry.location.lng;
+        console.log(
+          `City: ${json.results[0].formatted_address} -`,
+          `Latitude: ${json.results[0].geometry.location.lat} -`,
+          `Longitude: ${json.results[0].geometry.location.lng}`
+        );
+        conn.query('INSERT INTO sellers (name, description, address, profilePic, deliveryRadius, delivers, lat, lng) VALUES (?, ?, ?, ?, ?, "yes", ?, ?)', 
+        [name, description, address, profilePic, deliveryRadius, lat, lng], function (err, rows, fields) 
         {
-            res.send("Post successful");
-        }
-        else
-        {
-            console.log(err);
-            res.send("Post failed");
-        }
-           
-    })
+            if (!err)
+            {
+                console.log("Post successful");
+                res.redirect("/");
+            }
+            else
+            {
+                console.log(err);
+                res.send("Post failed");
+            }
+               
+        })
+      });
 })
 
 app.use(express.static(path.join(__dirname, 'dist')));
