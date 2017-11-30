@@ -1,8 +1,7 @@
 <div class="wrapper">
 
     <h2>Products in Your Area</h2>
-  <div class="content">
-    <app-product *ngFor = "let product of products; let i = index" [product]="product" [index]="i">Product component</app-product>
-
+  <div class="scrollmenu">
+    <app-product *ngFor = "let product of products; let i = index" [product]="product" [index]="i"></app-product>
   </div>
 </div>
