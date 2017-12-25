@@ -1,13 +1,10 @@
 <a routerLink="/seller/{{seller.sellerID}}">
-  <div class="row equipo-item">
-  <div class="col-md-6 separador-vertical"><img [src]="seller.profilePic" class="img-responsive center-block"></div> 
-    <div class="col-md-6">
-      <h4 class="titulo-equipo">{{seller.name}}</h4>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
+  <div class="row padme">
+    <div class="col-md-4 test-border">
+      <img [src]="seller.profilePic" class="img-responsive user">
+    </div> 
+    <div class="col-md-8">
+      <h5>{{seller.name}}</h5>
     </div>
   </div>
 </a>

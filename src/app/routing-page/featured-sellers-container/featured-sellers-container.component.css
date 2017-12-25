@@ -28,3 +28,6 @@ html {
   overflow-y: scroll;
 }
 
+.giveSize{
+  width: 100%;
+}

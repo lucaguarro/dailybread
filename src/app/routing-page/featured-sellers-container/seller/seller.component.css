@@ -1,17 +1,19 @@
-.separador-vertical{
-  border-right:1px solid #bfbdbd;
-}
-  
-.titulo-equipo{
-  margin-top:0px;    
-}
-    
-.equipo-item{
-  border:	1px solid #D1CFCF ;
-  border-radius:10px;
-  margin-bottom:25px;
+.test-border{
+  border: red solid 2px;
 }
 
-.checked {
-    color: orange;
+.user {
+  border: black solid 3px;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
+
+.padme{
+  padding: 5px;
+}
+
